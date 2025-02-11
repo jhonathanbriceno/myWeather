@@ -25,6 +25,14 @@ struct CurrentWeather: Codable {
         case uvIndex = "uv"
         case feelsLike = "feelslike_f"
     }
+    
+    public init(temperature: Double, condition: WeatherCondition, humidity: Int, uvIndex: Double, feelsLike: Double) {
+        self.temperature = temperature
+        self.condition = condition
+        self.humidity = humidity
+        self.uvIndex = uvIndex
+        self.feelsLike = feelsLike
+    }
 }
 
 struct WeatherCondition: Codable {

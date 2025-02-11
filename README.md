@@ -8,9 +8,10 @@ Weather app that shows the weather for a city entered from the search bar
 ### Focus Areas:
 1.) Handling All user cases and UI states like loading, empty, error, content
 2.) Performance: Being sure to keep memory usage low, only do necessary server requests by taking advantage debouncing code
+3.) Unit test and code documentation
 
 ### Time Spent:
-4.5 hours, stopping myself now so I can submit, but with 1.5 more hours I believe I can unit test the whole thing. 
+5 hours, maybe a bit over because of unit test but close to deadline. 
 
 ### Getting Started:
 This project support iOS 17.0 and app, all you need is Xcode that supports this versions and you should be able to run the project
@@ -26,6 +27,7 @@ The project is developed with MVVM architecture.
 The main App has a folder for each View inside you will find the corresponding Model, Views and ViewModel classes
 Data Client folder is where the class used to make API requests can be found
 Utils folder for constants and extensions
+Response folder, used for response mocking on unit tests
 
 ## Dependencies:
 Kingfisher

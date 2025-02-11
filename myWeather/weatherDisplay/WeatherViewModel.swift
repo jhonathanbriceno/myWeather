@@ -15,7 +15,15 @@ protocol WeatherProtocol {
 
 class WeatherViewModel: ObservableObject, WeatherProtocol {
     
-    enum ViewState {
+    enum ViewState: Equatable {
+        static func == (lhs: WeatherViewModel.ViewState, rhs: WeatherViewModel.ViewState) -> Bool {
+            return lhs.value == rhs.value
+        }
+        
+        var value: String? {
+            return String(describing: self).components(separatedBy: "(").first
+        }
+        
         case error
         case content(weather: CurrentWeather, city: String)
         case searchResult(weather: CurrentWeather, city: String)
